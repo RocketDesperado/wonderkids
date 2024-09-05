@@ -39,7 +39,7 @@ function ImageSlider() {
     }, []);
 
     return (
-        <div style={{ position: 'relative', maxWidth: '100%', padding: '0', height: '850px', marginTop: '80px' }}> {/* Adjust height if needed */}
+        <div className="image-slider-container"> {/* Adjust height if needed */}
             <div className="slider">
                 <div className="slider-wrapper">
                     {images.map((image, index) => (
