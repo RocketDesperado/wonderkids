@@ -1,6 +1,6 @@
 import React from 'react';
 import './JeopardComponent.css'; // Import the CSS file for text styling
-import jeopardImg from './assets/jeopardsection/jeopard.svg'; // Import the SVG image
+import jeopardImg from '../../assets/jeopardsection/jeopard.svg'; // Import the SVG image
 
 function JeopardComponent() {
     return (

@@ -4,9 +4,9 @@ import React from 'react';
 import './Trust.css'; // Import the CSS file for styling
 
 // Importing images
-import img1 from './assets/trustsection/img1.svg';
-import img2 from './assets/trustsection/img2.svg';
-import img3 from './assets/trustsection/img3.svg';
+import img1 from '../../assets/trustsection/img1.svg';
+import img2 from '../../assets/trustsection/img2.svg';
+import img3 from '../../assets/trustsection/img3.svg';
 
 function Trust() {
     return (

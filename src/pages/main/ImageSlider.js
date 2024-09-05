@@ -4,14 +4,14 @@ import React, { useState, useEffect } from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import './ImageSlider.css'; // Import the CSS file for styling
 import { useNavigate } from 'react-router-dom';
-import image1 from './assets/image3.jpg';
-import image2 from './assets/image2.jpg';
-import image3 from './assets/image1.jpg';
-import image4 from './assets/image4.jpg';
-import image5 from './assets/image5.jpg';
-import FancyButton from "./FancyButton";
+import image1 from '../../assets/image3.jpg';
+import image2 from '../../assets/image2.jpg';
+import image3 from '../../assets/image1.jpg';
+import image4 from '../../assets/image4.jpg';
+import image5 from '../../assets/image5.jpg';
+import FancyButton from "../../button/FancyButton";
 import TypingAnimation from './TypingAnimation'; // Import the typing animation component
-import AnimatedModal from './modal/AnimatedModal'; // Import the animated modal component
+import AnimatedModal from '../../modal/AnimatedModal'; // Import the animated modal component
 
 const images = [image1, image2, image3, image4, image5];
 

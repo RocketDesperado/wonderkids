@@ -7,7 +7,7 @@ import img2 from '../assets/offlinesection/img2.svg';
 import img3 from '../assets/offlinesection/img3.svg';
 import img4 from '../assets/offlinesection/img4.svg';
 import AnimatedModal from "../modal/AnimatedModal";
-import FancyButton from "../FancyButton";
+import FancyButton from "../button/FancyButton";
 
 const Offline = () => {
     const [modalOpen, setModalOpen] = useState(false);
