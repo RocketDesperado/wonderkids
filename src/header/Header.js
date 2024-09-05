@@ -128,7 +128,11 @@ function Header() {
                         />
                     </nav>
                 )}
-
+                <div className="header-address">
+                    <a href="tel:+375291242517" className="phone-number" >
+                        +375 (29) 124-25-17
+                    </a>
+                </div>
                 <div className={`header-buttons ${menuOpen ? 'hidden' : ''}`}>
                     <Box className="button-container">
                         <FancyButton color="red" label="ЗАПИСАТЬСЯ" onClick={openModal} />
