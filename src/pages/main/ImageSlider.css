@@ -1,5 +1,13 @@
 /* src/ImageSlider.css */
 
+.image-slider-container {
+    position: relative;
+    maxWidth: 100%;
+    padding: 0;
+    height: 850px;
+    marginTop: 80px;
+}
+
 .slider {
     position: relative;
     width: 100%;
@@ -72,11 +80,12 @@
 @media (max-width: 768px) {
     .text-overlay {
         height: auto; /* Let height adjust based on content */
-        max-height: 95%; /* Adjust for smaller screens */
+        max-height: 100%; /* Adjust for smaller screens */
         width: 95%; /* Adjust width for smaller screens */
     }
 
-    .text-content-inner {
+    .text-content {
+        transform: scale(0.85); /* Scale down the content */
         font-size: 0.85em; /* Further reduce font size on small screens */
         white-space: normal; /* Allow wrapping on small screens */
     }
