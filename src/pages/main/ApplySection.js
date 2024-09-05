@@ -1,7 +1,7 @@
 import React from 'react';
 import './ApplySection.css';
-import applyImage from './assets/applysection/apply.jpg';
-import AmoCRMformOne from "./modal/AmoCRMformOne";
+import applyImage from '../../assets/applysection/apply.jpg';
+import AmoCRMformOne from "../../modal/AmoCRMformOne";
 
 function ApplySection() {
     return (

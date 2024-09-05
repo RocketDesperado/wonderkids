@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import FancyButton from './FancyButton';
+import FancyButton from '../button/FancyButton';
 import DropdownMenu from './DropdownMenu';
-import AnimatedModal from './modal/AnimatedModal';
-import logo from './assets/logo.png';
+import AnimatedModal from '../modal/AnimatedModal';
+import logo from '../assets/logo.png';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import TelegramIcon from './assets/telegram.svg';
-import WhatsAppIcon from './assets/whatsapp.svg';
-import ViberIcon from './assets/viber.svg';
+import TelegramIcon from '../assets/telegram.svg';
+import WhatsAppIcon from '../assets/whatsapp.svg';
+import ViberIcon from '../assets/viber.svg';
 import { Box } from "@mui/material";
 
 function Header() {
@@ -128,7 +128,11 @@ function Header() {
                         />
                     </nav>
                 )}
-
+                <div className="header-address">
+                    <a href="tel:+375291242517" className="phone-number" >
+                        +375 (29) 124-25-17
+                    </a>
+                </div>
                 <div className={`header-buttons ${menuOpen ? 'hidden' : ''}`}>
                     <Box className="button-container">
                         <FancyButton color="red" label="ЗАПИСАТЬСЯ" onClick={openModal} />

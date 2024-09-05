@@ -2,12 +2,11 @@ import React from 'react';
 import './HowWeHelp.css'; // Import the CSS file for styling
 
 // Import the images (ensure the paths are correct)
-import img1 from './assets/howwehelpsection/img1.png';
-import img2 from './assets/howwehelpsection/img2.png';
-import img3 from './assets/howwehelpsection/img3.png';
-import img4 from './assets/howwehelpsection/img4.png';
-import img5 from './assets/howwehelpsection/img5.png';
-import img6 from './assets/howwehelpsection/img6.png';
+import img1 from '../../assets/howwehelpsection/img1.png';
+import img2 from '../../assets/howwehelpsection/img2.png';
+import img3 from '../../assets/howwehelpsection/img3.png';
+import img4 from '../../assets/howwehelpsection/img4.png';
+import img5 from '../../assets/howwehelpsection/img5.png';
 
 const HowWeHelp = () => {
     return (

@@ -2,7 +2,7 @@
 
 import React, {useState} from 'react';
 import onlineImage from "../assets/onlinesection/online_img.png";
-import FancyButton from "../FancyButton";
+import FancyButton from "../button/FancyButton";
 import AnimatedModal from "../modal/AnimatedModal";
 
 const Online = () => {

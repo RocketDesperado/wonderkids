@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Correct import for React Router v6
 import './FinalRedirectComponent.css';
-import leftImage from './assets/finalredirectcomponentsection/left_image.png'; // Adjust path as needed
-import rightImage from './assets/finalredirectcomponentsection/right_image.jpg'; // Adjust path as needed
+import leftImage from '../../assets/finalredirectcomponentsection/left_image.png'; // Adjust path as needed
+import rightImage from '../../assets/finalredirectcomponentsection/right_image.jpg'; // Adjust path as needed
 
 
 const FinalRedirectComponent = () => {

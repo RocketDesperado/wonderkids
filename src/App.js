@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import Header from './Header';
+import Header from './header/Header';
 import Online from './pages/Online';
 import Offline from './pages/Offline';
 import Consultation from './pages/Consultation';
 import About from './pages/about/About';
 import Reviews from './pages/Reviews';
 import FAQ from './pages/FAQ';
-import ImageSlider from './ImageSlider';
+import ImageSlider from './pages/main/ImageSlider';
 import Footer from "./Footer";
-import HelpSection from "./HelpSection";
-import JeopardComponent from "./JeopardComponent";
-import HowWeHelp from "./HowWeHelp";
-import FinalRedirectComponent from "./FinalRedirectComponent";
+import HelpSection from "./pages/main/HelpSection";
+import JeopardComponent from "./pages/main/JeopardComponent";
+import HowWeHelp from "./pages/main/HowWeHelp";
+import FinalRedirectComponent from "./pages/main/FinalRedirectComponent";
 import ScrollToTop from './ScrollToTop';
-import ApplySection from "./ApplySection";
-import Trust from "./Trust";
+import ApplySection from "./pages/main/ApplySection";
+import Trust from "./pages/main/Trust";
 import ModalQuestion from "./modal/ModalQuestion";
 
 const MainPage = () => {
@@ -36,7 +36,7 @@ const MainPage = () => {
                         setShowModal(true);
                         hasShownModal = true; // Set the flag to true once the modal is shown
                     }
-                }, 1 * 60 * 1000); // 1 minute initial inactivity
+                }, 60 * 1000); // 1 minute initial inactivity
             }
         };
 
