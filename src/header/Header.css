@@ -160,9 +160,7 @@
     }
 
     .social-buttons {
-        margin-right: 7px; /* Ensure sufficient margin on the right on mobile */
-        margin-left: 7px; /* Remove any unnecessary left margin. */
-        gap: 8px;
+        padding-bottom: 10px;
     }
 
     .menu-toggle {
@@ -182,6 +180,10 @@
     }
 
     .header-address {
+        display: none; /* Hide desktop menu on mobile */
+    }
+
+    .social-buttons {
         display: none; /* Hide desktop menu on mobile */
     }
 }

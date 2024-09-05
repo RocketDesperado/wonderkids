@@ -88,6 +88,19 @@ function Header() {
                             ]}
                             hasDropdown={false}
                         />
+                        <div>
+                            <div className="social-buttons">
+                                <IconButton aria-label="Telegram" href="https://telegram.org" target="_blank">
+                                    <img src={TelegramIcon} alt="Telegram" style={{ width: '41px', height: '41px' }} />
+                                </IconButton>
+                                <IconButton aria-label="Viber" href="https://viber.com" target="_blank">
+                                    <img src={ViberIcon} alt="Viber" style={{ width: '40px', height: '40px' }} />
+                                </IconButton>
+                                <IconButton aria-label="WhatsApp" href="https://whatsapp.com" target="_blank">
+                                    <img src={WhatsAppIcon} alt="WhatsApp" style={{ width: '58px', height: '58px' }} />
+                                </IconButton>
+                            </div>
+                        </div>
                     </nav>
                 )}
 
@@ -124,6 +137,8 @@ function Header() {
                             hasDropdown={false}
                         />
                     </nav>
+
+
                 )}
                 <div className="header-address">
                     <a href="tel:+375291242517" className="phone-number" >
