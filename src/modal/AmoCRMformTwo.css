@@ -64,6 +64,7 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
 
+/* TODO mobiles should work */
 @media (max-width: 768px) {
     #amocrm-form-container-two {
         padding: 0px !important;

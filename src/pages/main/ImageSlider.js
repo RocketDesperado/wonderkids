@@ -10,16 +10,20 @@ import image3 from '../../assets/image1.jpg';
 import image4 from '../../assets/image4.jpg';
 import image5 from '../../assets/image5.jpg';
 import FancyButton from "../../button/FancyButton";
-import TypingAnimation from './TypingAnimation'; // Import the typing animation component
-import AnimatedModal from '../../modal/AnimatedModal'; // Import the animated modal component
+import TypingAnimation from './TypingAnimation';
+import BlurModal from "../../modal/BlurModal"; // Import the typing animation component
 
 const images = [image1, image2, image3, image4, image5];
 
 function ImageSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const navigate = useNavigate(); // Initialize the useNavigate hook
+
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const navigate = useNavigate(); // Initialize the useNavigate hook
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
+    };
 
     // Function to handle button click
     const toReviewsButtonHandler = () => {
@@ -34,16 +38,8 @@ function ImageSlider() {
         return () => clearInterval(interval); // Cleanup on component unmount
     }, []);
 
-    const handleOpenModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-    };
-
     return (
-        <Container style={{ position: 'relative', maxWidth: '100%', padding: '0', height: '850px', marginTop: '80px' }}> {/* Adjust height if needed */}
+        <div style={{ position: 'relative', maxWidth: '100%', padding: '0', height: '850px', marginTop: '80px' }}> {/* Adjust height if needed */}
             <div className="slider">
                 <div className="slider-wrapper">
                     {images.map((image, index) => (
@@ -111,12 +107,12 @@ function ImageSlider() {
                     </div>
                 </Box>
                 <Box className="button-container">
-                    <FancyButton color="red" label="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" onClick={handleOpenModal} />
+                    <FancyButton color="red" label="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ" onClick={toggleModal} />
                     <FancyButton color="green" label="ОТЗЫВЫ" onClick={toReviewsButtonHandler} />
                 </Box>
             </Box>
-            <AnimatedModal open={isModalOpen} onClose={handleCloseModal} />
-        </Container>
+            <BlurModal isOpen={isModalOpen} close={() => setIsModalOpen(false)} />
+        </div>
     );
 }
 
