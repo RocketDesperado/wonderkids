@@ -12,11 +12,18 @@ import TelegramIcon from '../assets/telegram.svg';
 import WhatsAppIcon from '../assets/whatsapp.svg';
 import ViberIcon from '../assets/viber.svg';
 import { Box } from "@mui/material";
+import BlurModal from "../modal/BlurModal";
 
 function Header() {
     const [modalOpen, setModalOpen] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
+    };
 
     const openModal = () => {
         setModalOpen(true);
@@ -135,7 +142,8 @@ function Header() {
                 </div>
                 <div className={`header-buttons ${menuOpen ? 'hidden' : ''}`}>
                     <Box className="button-container">
-                        <FancyButton color="red" label="ЗАПИСАТЬСЯ" onClick={openModal} />
+                        <FancyButton label="ЗАПИСАТЬСЯ" onClick={toggleModal} />
+                        <BlurModal isOpen={isModalOpen} close={() => setIsModalOpen(false)} />
                     </Box>
                     <div className="social-buttons">
                         <IconButton aria-label="Telegram" href="https://telegram.org" target="_blank">
