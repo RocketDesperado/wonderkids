@@ -104,6 +104,7 @@
         flex-direction: column; /* Stack image on top of the text */
         height: auto; /* Allow the height to adjust based on content */
         gap: 20px; /* Space between sections when stacked vertically */
+        padding-bottom: 10px;
         max-width: 100%;
         grid-template-columns: 1fr; /* Stack columns vertically on small screens */
         grid-template-rows: repeat(6, auto); /* Each cell takes up one row */
