@@ -1,0 +1,36 @@
+/* JeopardComponent.css */
+
+/* Container for the JeopardComponent */
+.jeopard-background-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow to make sure content doesn’t overflow */
+    background: no-repeat center center; /* Center the background image */
+    background-size: 20%; /* Scale the image to 50% of its original size */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Background color to ensure readability */
+}
+
+/* Centered text styling for JeopardComponent */
+.jeopard-text-overlay {
+    position: absolute;
+    z-index: 1;
+    font-size: 30px;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
+    max-width: 80%; /* Wider text area */
+    padding: 20px; /* Padding for better readability */
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: background color for better text readability */
+    border-radius: 10px; /* Optional: rounded corners for text area */
+}
+
+@media (max-width: 768px) {
+    .jeopard-text-overlay {
+        font-size: 20px;
+    }
+}

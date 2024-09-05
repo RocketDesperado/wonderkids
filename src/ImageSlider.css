@@ -1,0 +1,84 @@
+/* src/ImageSlider.css */
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 880px; /* Adjust based on your design */
+    margin-top: 0; /* Ensure no margin at the top */
+    padding-top: 0; /* Ensure no padding at the top */
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top; /* Aligns the image to the top edge */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(17, 15, 15, 0.8); /* Less transparent */
+    padding: 40px;
+    border-radius: 80px;
+    z-index: 80;
+    width: 90%; /* Increased width to allow more text space */
+    height: auto; /* Let height adjust based on content */
+    max-width: 700px; /* Increased max-width */
+    max-height: 70%; /* Added max-height to prevent overflow */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    box-sizing: border-box;
+}
+
+.text-content-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis to overflowing text */
+    gap: 5px; /* Adjust gap between words if necessary */
+    font-size: 0.95em; /* Slightly smaller font size for better fit */
+}
+
+.text-content {
+    text-align: left; /* Align the text to the left */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .text-overlay {
+        height: auto; /* Let height adjust based on content */
+        max-height: 80%; /* Adjust for smaller screens */
+        width: 95%; /* Adjust width for smaller screens */
+    }
+
+    .text-content-inner {
+        font-size: 0.85em; /* Further reduce font size on small screens */
+        white-space: normal; /* Allow wrapping on small screens */
+    }
+}
+

@@ -1,0 +1,164 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex; /* Ensure header uses flexbox layout */
+    justify-content: space-between; /* Space between logo and buttons */
+    align-items: center; /* Center items vertically */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative; /* Position relative to center the menu toggle */
+}
+
+.logo-link {
+    display: flex; /* Center logo vertically */
+    align-items: center;
+}
+
+.logo-image {
+    height: 70px;
+    width: auto;
+}
+
+.header-menu {
+    flex: 2;
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Center menu items */
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    margin-right: 30px;
+}
+
+.header-buttons.hidden {
+    display: none; /* Hide buttons when menu is open on mobile */
+}
+
+.header-address {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+}
+
+.phone-number {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin-right: 20px;
+}
+
+.phone-number:hover {
+    color: #3EB489;
+}
+
+.social-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 15px;
+}
+
+.social-buttons .MuiIconButton-root {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 36px;
+    height: 36px;
+    transition: transform 0.3s ease;
+}
+
+.social-buttons .MuiIconButton-root:hover {
+    transform: scale(1.1);
+}
+
+/* Styles for mobile menu toggle */
+.menu-toggle {
+    display: none; /* Hide by default */
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none; /* Hide mobile menu by default */
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Center items in mobile menu */
+}
+
+/* Center menu toggle button */
+.header-content.mobile-menu-open .menu-toggle {
+    display: block; /* Show menu toggle button on mobile */
+    position: absolute; /* Absolute positioning to center */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+}
+
+/* ParentComponent.css */
+.content.blur {
+    filter: blur(8px);
+    pointer-events: none; /* Disables interaction with the blurred area */
+    user-select: none; /* Prevents text selection */
+}
+
+.amo-crm-modal {
+    position: fixed; /* Ensures the modal is positioned relative to the viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Makes sure it's above other content */
+    width: 50%; /* Or any specific width */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Optional: Add transitions for smoother appearance */
+.amo-crm-modal {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0; /* Start hidden */
+}
+
+.amo-crm-modal.visible {
+    opacity: 1; /* Fade in */
+}
+
+
+@media (max-width: 768px) {
+    .header-menu {
+        display: none; /* Hide desktop menu on mobile */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle button on mobile */
+    }
+
+    .mobile-menu {
+        display: flex; /* Show mobile menu when open */
+    }
+
+    .header-buttons.hidden {
+        display: none; /* Hide header buttons when menu is open */
+    }
+}

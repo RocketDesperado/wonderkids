@@ -1,0 +1,75 @@
+/* src/Trust.css */
+
+.trust-section {
+    padding-top: 135px;
+    text-align: center;
+}
+
+.trust-header {
+    margin-bottom: 105px;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.23;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trust-description {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px; /* You can adjust this width as needed */
+    margin: 0 auto;
+}
+
+.trust-item {
+    text-align: center;
+    flex: 1;
+}
+
+.trust-image {
+    max-width: 100%;
+    height: 35%;
+}
+
+.trust-title {
+    margin-top: 18px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.trust-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.55;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .trust-description {
+        flex-direction: column; /* Stack items vertically */
+        gap: 40px; /* Add spacing between vertically stacked items */
+    }
+
+    .trust-text {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .trust-item {
+        flex: none; /* Remove flex grow/shrink properties */
+        width: 100%; /* Ensure items take full width */
+    }
+
+    .trust-image {
+        max-width: 25%;
+    }
+
+    .trust-section {
+        padding-top: 50px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,139 @@
+/* src/ApplySection.css */
+
+#amocrm-form-container {
+    height: auto; /* Ensure it adjusts based on content */
+    position: absolute; /* Absolute position to control placement */
+    bottom: 0; /* Align at the bottom of the parent container */
+    left: 0; /* Start from the left edge */
+    right: 0; /* End at the right edge */
+    width: auto; /* Take full width of the container */
+    margin: 0 auto; /* Center the form horizontally */
+    z-index: 9999; /* High z-index to ensure it's above other elements */
+    transform: translateX(-18%);
+}
+
+.apply-section {
+    background-size: cover;
+    background-position: center;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.apply-content {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Light background for better text visibility */
+    border-radius: 20px;
+    max-width: 800px;
+    height: 85%;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.apply-header {
+    font-size: 44px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.apply-description {
+    font-size: 22px;
+    font-weight: 300;
+    color: #000000;
+    margin-bottom: 40px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto; /* Center the div horizontally */
+}
+
+.apply-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.apply-input {
+    padding: 15px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    font-weight: 300; /* Thinner font weight */
+    color: #000000;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    width: 180px; /* Set a fixed width */
+}
+
+.apply-input:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.apply-button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #f44336, #e57373); /* Gradient background */
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0; /* Prevent the button from shrinking */
+}
+
+.apply-button:hover {
+    background: linear-gradient(135deg, #d32f2f, #ef5350);
+    transform: scale(1.05);
+}
+
+.apply-button:active {
+    transform: scale(1);
+}
+
+@media (max-width: 768px) {
+    .apply-content {
+        height: auto; /* Remove fixed height */
+        padding: 10px; /* Ensure enough padding on mobile */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .apply-description {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 30px; /* Adjust spacing */
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .apply-form {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 15px; /* Space between form elements */
+    }
+
+    .apply-input {
+        width: 100%; /* Full width of parent container */
+        max-width: 300px; /* Maximum width for better layout */
+        margin-bottom: 15px; /* Spacing between inputs */
+    }
+
+    .apply-button {
+        width: 100%; /* Full width of parent container */
+        max-width: 300px; /* Maximum width for better layout */
+    }
+
+    /* Responsive styles for AmoCRM form */
+    #amocrm-form-container {
+        position: relative; /* Remove absolute positioning */
+        bottom: auto; /* No need for bottom alignment */
+        left: 0; /* Reset left positioning */
+        right: 0; /* Reset right positioning */
+        transform: none; /* Remove translateX adjustment */
+        width: 100%; /* Full width of the parent container */
+        margin: 0 auto; /* Center the form horizontally */
+    }
+}

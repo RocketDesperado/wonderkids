@@ -1,0 +1,113 @@
+/* src/AboutSection.css */
+
+.about-section {
+    padding-top: 180px;
+}
+
+.about-inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0;
+    display: flex;
+    align-items: stretch; /* Make children stretch to the height of the tallest element */
+    justify-content: center; /* Center items horizontally */
+    gap: 150px; /* Gap between items */
+    margin-bottom: 100px;
+}
+
+.about-image img {
+    width: 100%; /* Make image take full width of the container */
+    height: 100%; /* Make image take full height of the container */
+    object-fit: cover !important; /* Ensure image covers the container, cropping overflow */
+    height: 100%; /* Make the container fill the height of the text container */
+    overflow: inherit; /* Hide overflow to keep image within bounds */
+}
+
+.about-text {
+    padding: 60px 60px;
+    background-color: #3b8cd5; /* Light blue background color for text area */
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.about-header {
+    margin-bottom: 24px;
+    color: #fff;
+    font-size: 42px;
+    line-height: 1.23;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: left;
+}
+
+.fancy-line {
+    border-top: 2px solid #fff; /* Line color same as the header text color */
+    margin: 20px 0;
+}
+
+.about-description {
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.55;
+    font-weight: 300;
+    color: #fff;
+}
+
+/* Media Queries for Smaller Screens (768px or less) */
+@media (max-width: 768px) {
+
+    .about-section {
+        margin-top: 80px;
+        padding-top: 20px; /* Reduce padding on smaller screens */
+        background-color: white; /* Set background to white on mobile */
+        padding-left: 10px; /* Add padding for smaller screens */
+        padding-right: 10px; /* Add padding for smaller screens */
+    }
+
+    .about-inner {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align content */
+        gap: 20px; /* Reduce gap between elements */
+        margin-bottom: 10px; /* Reduce bottom margin */
+        width: 100%; /* Ensure the container takes full width */
+        padding: 0 10px; /* Add padding to avoid overflow */
+        box-sizing: border-box; /* Include padding in the width calculation */
+    }
+
+    .about-image img {
+        order: 2;
+        width: 100%; /* Ensure image takes full width */
+        height: auto; /* Adjust height to maintain aspect ratio */
+        margin-bottom: 20px; /* Add margin at the bottom */
+    }
+
+    .about-text {
+        order: 1;
+        width: 100%; /* Make text take full width */
+        padding: 20px; /* Adjust padding for smaller screens */
+        margin-bottom: 20px; /* Add margin at the bottom */
+        text-align: center; /* Center text on smaller screens */
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+
+    .about-header {
+        font-size: 28px; /* Adjust font size for smaller screens */
+        margin-bottom: 16px; /* Adjust margin */
+    }
+
+    .fancy-line {
+        margin: 16px 0; /* Adjust margin for smaller screens */
+    }
+
+    .about-description {
+        font-size: 14px; /* Adjust font size for readability */
+        line-height: 1.5; /* Adjust line-height */
+    }
+}
+

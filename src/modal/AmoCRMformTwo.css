@@ -1,0 +1,67 @@
+/* AmoCRMformTwo.css */
+
+/* Animation for the modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Apply animation */
+.dialog-paper {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* You may need to create a class for exit if controlled via JS */
+.dialog-paper-exit {
+    animation: fadeOut 0.6s ease-in-out;
+}
+
+/* Styling for the container inside the dialog where the form will be injected */
+#amocrm-form-container-two {
+    padding: 20px; /* Padding around the form */
+    background: #fff; /* Background color for the form area */
+    border-radius: 8px; /* Rounded corners for the form container */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Subtle shadow around the form */
+    width: auto; /* Auto width based on content within */
+    margin: auto; /* Center the form in the dialog */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+/* Styling specific to form fields and buttons if they are not dynamically loaded by amoCRM script */
+.form-field, .form-button {
+    margin-top: 20px; /* Space between fields */
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    border-radius: 4px; /* Rounded corners for inputs and buttons */
+}
+
+.form-button {
+    background: linear-gradient(135deg, #3EB489, #5A9BD6); /* Gradient background for buttons */
+    color: white; /* Text color for buttons */
+    border: none; /* No border for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.form-button:hover {
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}

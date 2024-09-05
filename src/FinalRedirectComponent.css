@@ -1,0 +1,106 @@
+.final-redirect-container {
+    padding-top: 135px;
+    text-align: center;
+}
+
+.final-redirect-header {
+    margin-bottom: 40px;
+}
+
+.final-redirect-title {
+    font-size: 38px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.final-redirect-description {
+    font-size: 22px;
+    font-weight: 300;
+    color: #333333;
+}
+
+.final-redirect-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.final-redirect-cell {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #bbeae1;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.final-redirect-cell:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.final-redirect-image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.final-redirect-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.final-redirect-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.final-redirect-paragraph {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.final-redirect-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.final-redirect-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .final-redirect-content {
+        flex-direction: column; /* Stack cells vertically */
+        gap: 20px; /* Space between stacked cells */
+    }
+
+    .final-redirect-cell {
+        width: 90%; /* Full width for each cell */
+        flex-direction: column; /* Ensure content stacks vertically */
+    }
+
+    .final-redirect-image {
+        width: 90%; /* Full width for images within cells */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

@@ -1,0 +1,257 @@
+.offline-section {
+    width: 100%;
+}
+
+/* Header Section */
+.offline-header {
+    margin-top: 170px;
+    text-align: center;
+    margin-bottom: 130px;
+}
+
+.offline-main-text {
+    font-size: 42px;
+    line-height: 1.23;
+    font-weight: 600;
+    color: #000000;
+}
+
+.offline-sub-text {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #000000;
+    margin-top: 10px;
+}
+
+/* Content Section */
+.offline-content {
+    display: flex;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    background-color: #c0f6f8;
+}
+
+.offline-text {
+    flex: 1 1 50%; /* Allow text to take up 50% of the container, with flexibility */
+    padding: 0 20px;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.offline-text p {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.offline-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.offline-text ul li {
+    margin-bottom: 10px;
+}
+
+.offline-image {
+    flex: 1 1 50%; /* Allow image to take up 50% of the container, with flexibility */
+    height: 100%; /* Ensure the container div uses 100% of the available height */
+    overflow: hidden; /* Hide any part of the image that goes beyond the container */
+}
+
+.offline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container fully */
+}
+
+/* Container for the entire program section */
+.offline-course-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.button-container-offline {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: auto; /* Push the button to the bottom */
+    padding-top: 20px; /* Add some padding above the button */
+}
+
+/* Title styling */
+.course-title {
+    font-size: 42px;
+    margin-bottom: 90px;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* Container for the sections */
+.info-sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+    gap: 20px; /* Adds space between sections */
+}
+
+/* Individual section styling */
+.info-section {
+    background-color: #c0f6f8;
+    border-radius: 45px;
+    padding: 30px 20px;
+    flex: 1;
+    max-width: 23%; /* Each section will be about 23% of the container's width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+/* Hover effect for sections */
+.info-section:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+/* Header styling */
+.info-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* Description text styling */
+.info-section p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Image styling */
+.info-section img {
+    width: 70px; /* Larger image size */
+    height: auto;
+    margin-top: 20px;
+}
+
+.advantages-container {
+    padding: 30px;
+    background-color: #f5f5f5;
+}
+
+.advantages-header {
+    margin-top: 90px;
+    font-size: 42px;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 50px; /* Gap to top border */
+}
+
+.advantages-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.advantage-item {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center text inside the cell */
+}
+
+.advantage-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.advantage-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px; /* Larger font size for the number */
+    color: rgba(0, 0, 0, 0.1); /* Light color for transparency effect */
+    z-index: 0; /* Positioned behind the text */
+}
+
+.advantage-text {
+    position: relative; /* Ensures text is above the number */
+    margin-top: 50px; /* Space between number and text */
+}
+
+.advantage-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.advantage-description {
+    font-size: 16px;
+    font-weight: 300;
+    color: #333333;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .offline-content {
+        flex-direction: column; /* Stack image on top of the text */
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    .offline-image {
+        order: 1; /* Image first */
+        height: 50vh; /* Make the image take up half the viewport height */
+    }
+
+    .offline-text {
+        order: 2; /* Text second */
+        padding-top: 20px; /* Add some space between the image and text */
+    }
+
+    .info-sections {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        gap: 20px; /* Space between sections when stacked vertically */
+    }
+
+    .info-section {
+        max-width: 100%; /* Full width for each section when stacked vertically */
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr; /* Stack columns vertically on small screens */
+        grid-template-rows: repeat(6, auto); /* Each cell takes up one row */
+    }
+
+    .advantage-item {
+        text-align: center;
+    }
+
+    .button-container-offline {
+        padding-bottom: 20px; /* Add some padding above the button */
+    }
+}

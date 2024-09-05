@@ -1,0 +1,82 @@
+/* src/FancyButton.css */
+
+.fancy-button {
+    padding: 15px 30px;
+    font-size: 14px;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Ensure the sun effect stays inside the button */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    z-index: 1;
+    background: linear-gradient(135deg, #f44336, #e57373); /* Gradient background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: glowBlink 6s infinite ease-in-out;
+}
+
+.fancy-button.green {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+}
+
+.fancy-button.red {
+    background: linear-gradient(135deg, #f44336, #e57373);
+    box-shadow: 0 0 15px rgba(244, 67, 54, 0.5);
+}
+
+@keyframes sunReflection {
+    0% {
+        opacity: 0.2;
+        transform: translateX(-150%) rotate(45deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(0%) rotate(45deg);
+    }
+    100% {
+        opacity: 0.2;
+        transform: translateX(150%) rotate(45deg);
+    }
+}
+
+.fancy-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -150%; /* Start outside the button */
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%);
+    transform: translate(-50%, -50%) rotate(45deg); /* Rotated to create the reflection effect */
+    z-index: 0;
+    pointer-events: none;
+    animation: sunReflection 4s infinite ease-in-out;
+}
+
+.fancy-button:hover::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.fancy-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-label {
+    position: relative;
+    z-index: 1;
+}
+
+.fancy-button.red:hover {
+    background: linear-gradient(135deg, #d32f2f, #ef5350);
+    box-shadow: 0 0 20px rgba(244, 67, 54, 0.7), 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+.fancy-button.green:hover {
+    background: linear-gradient(135deg, #388e3c, #66bb6a);
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.7), 0 0 15px rgba(0, 255, 0, 0.5);
+}

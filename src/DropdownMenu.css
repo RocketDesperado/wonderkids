@@ -1,0 +1,71 @@
+.menu-item {
+    position: relative; /* Positioning context for dropdown */
+}
+
+.menu-link-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-link {
+    display: block;
+    padding: 10px 20px;
+    color: #4682B4; /* Steel blue color for text, more intense */
+    font-weight: bold; /* Make text bold */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer; /* Show pointer cursor for clickable items */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* More intense shadow for text */
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for color and shadow */
+}
+
+.menu-link:hover {
+    color: #4169E1; /* Royal blue on hover for a more dramatic effect */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* More shadow on hover for better contrast */
+}
+
+.has-dropdown .menu-link {
+    cursor: default; /* Indicate non-clickable for dropdown trigger */
+}
+
+.triangle {
+    margin-left: 5px;
+    font-size: 12px;
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.triangle.open {
+    transform: rotate(180deg); /* Rotate triangle when dropdown is open */
+}
+
+.dropdown-menu {
+    display: none; /* Hide dropdown menu by default */
+    position: absolute; /* Position relative to the menu item */
+    top: 100%; /* Place below the menu item */
+    left: 0;
+    background-color: white; /* Background color of the dropdown */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border for dropdown */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it appears on top */
+    width: max-content; /* Adjust width to content */
+    padding: 5px 0; /* Padding around items */
+}
+
+.menu-item:hover .dropdown-menu {
+    display: block; /* Show dropdown menu on hover */
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #4682B4; /* Steel blue color for text */
+    font-weight: bold; /* Make text bold */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer; /* Show pointer cursor for clickable dropdown items */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* More intense shadow for text */
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for color and shadow */
+}
+
+.dropdown-item:hover {
+    color: #4169E1; /* Royal blue on hover for a more dramatic effect */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* More shadow on hover for better contrast */
+}

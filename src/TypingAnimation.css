@@ -1,0 +1,14 @@
+/* src/TypingAnimation.css */
+
+.cursor {
+    display: inline-block;
+    width: 0.1em; /* Width of the cursor */
+    background-color: white; /* Cursor color */
+    animation: blink 0.7s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
