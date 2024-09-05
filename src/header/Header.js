@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 import FancyButton from '../button/FancyButton';
 import DropdownMenu from './DropdownMenu';
-import AnimatedModal from '../modal/AnimatedModal';
 import logo from '../assets/logo.png';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -15,7 +14,6 @@ import { Box } from "@mui/material";
 import BlurModal from "../modal/BlurModal";
 
 function Header() {
-    const [modalOpen, setModalOpen] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -23,14 +21,6 @@ function Header() {
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
-    };
-
-    const openModal = () => {
-        setModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setModalOpen(false);
     };
 
     const toggleMenu = () => {
@@ -164,7 +154,6 @@ function Header() {
                     </IconButton>
                 )}
             </div>
-            <AnimatedModal open={modalOpen} onClose={closeModal} />
         </header>
     );
 }
