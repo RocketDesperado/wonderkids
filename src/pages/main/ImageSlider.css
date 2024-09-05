@@ -72,7 +72,7 @@
 @media (max-width: 768px) {
     .text-overlay {
         height: auto; /* Let height adjust based on content */
-        max-height: 80%; /* Adjust for smaller screens */
+        max-height: 95%; /* Adjust for smaller screens */
         width: 95%; /* Adjust width for smaller screens */
     }
 

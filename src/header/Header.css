@@ -162,4 +162,8 @@
     .header-buttons.hidden {
         display: none; /* Hide header buttons when menu is open */
     }
+
+    .header-address {
+        display: none; /* Hide desktop menu on mobile */
+    }
 }
