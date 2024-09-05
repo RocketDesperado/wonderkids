@@ -1,5 +1,6 @@
 /* BlurModal.css */
 .blur-modal {
+    padding-top: 50px;
     position: fixed;
     top: 0;
     left: 0;
@@ -12,6 +13,7 @@
     visibility: hidden; /* Hidden by default */
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
+    z-index: 81; /* Ensure it's high enough */
 }
 
 .blur-modal.open {

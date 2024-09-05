@@ -3,17 +3,13 @@
 import React, {useState} from 'react';
 import onlineImage from "../assets/onlinesection/online_img.png";
 import FancyButton from "../button/FancyButton";
-import AnimatedModal from "../modal/AnimatedModal";
+import BlurModal from "../modal/BlurModal";
 
 const Online = () => {
-    const [modalOpen, setModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openModal = () => {
-        setModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setModalOpen(false);
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
     };
 
     return (
@@ -38,7 +34,8 @@ const Online = () => {
                         <li>Поддержка родителей</li>
                     </ul>
                     <div className="button-container-offline">
-                        <FancyButton label="ЗАПИСАТЬСЯ" onClick={openModal} />
+                        <FancyButton label="ЗАПИСАТЬСЯ" onClick={toggleModal} />
+
                     </div>
                 </div>
                 <div className="offline-image">
@@ -64,7 +61,7 @@ const Online = () => {
                     </div>
                 </div>
             </div>
-            <AnimatedModal open={modalOpen} onClose={closeModal} />
+            <BlurModal isOpen={isModalOpen} close={() => setIsModalOpen(false)} />
         </div>
     );
 };

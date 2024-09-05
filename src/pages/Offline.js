@@ -6,18 +6,15 @@ import img1 from '../assets/offlinesection/img1.svg';
 import img2 from '../assets/offlinesection/img2.svg';
 import img3 from '../assets/offlinesection/img3.svg';
 import img4 from '../assets/offlinesection/img4.svg';
-import AnimatedModal from "../modal/AnimatedModal";
 import FancyButton from "../button/FancyButton";
+import BlurModal from "../modal/BlurModal";
 
 const Offline = () => {
-    const [modalOpen, setModalOpen] = useState(false);
 
-    const openModal = () => {
-        setModalOpen(true);
-    };
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const closeModal = () => {
-        setModalOpen(false);
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
     };
 
     return (
@@ -43,7 +40,7 @@ const Offline = () => {
                         <li>"Обучающий курс" для родителей: пять недель интенсивных знаний о нутрициологии, психологии и дефектологии. Мы поможем вам разобраться в сложных вопросах метаболизма, нейровоспалении, физиологии и питании, чтобы вы могли принимать осознанные решения и заботиться о здоровье вашего ребенка.</li>
                     </ul>
                     <div className="button-container-offline">
-                        <FancyButton label="ЗАПИСАТЬСЯ" onClick={openModal} />
+                        <FancyButton label="ЗАПИСАТЬСЯ" onClick={toggleModal} />
                     </div>
                 </div>
                 <div className="offline-image">
@@ -97,7 +94,7 @@ const Offline = () => {
                     </div>
                 </div>
             </div>
-            <AnimatedModal open={modalOpen} onClose={closeModal} />
+            <BlurModal isOpen={isModalOpen} close={() => setIsModalOpen(false)} />
         </div>
     );
 };
