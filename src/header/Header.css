@@ -8,7 +8,7 @@
     padding: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 100;
     display: flex; /* Ensure header uses flexbox layout */
     justify-content: space-between; /* Space between logo and buttons */
     align-items: center; /* Center items vertically */

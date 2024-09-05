@@ -64,14 +64,14 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
 
-/* TODO mobiles should work */
 @media (max-width: 768px) {
     #amocrm-form-container-two {
-        padding: 0px !important;
-        background: transparent !important;
-        width: 400px !important;
-        margin: auto !important;
-        display: flex !important;
-        flex-direction: column !important;
+        width: 500px; /* Auto width based on content within */
+
+        padding-top: 450px;
+        transform: scale(0.7); /* Scale down the content */
+        transform-origin: top center; /* Ensure it scales down around the top center */
+        /*overflow: auto; !* Still allow scrolling if needed *!*/
+        display: flex;
     }
 }
