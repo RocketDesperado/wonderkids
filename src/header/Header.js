@@ -89,7 +89,7 @@ function Header() {
                             hasDropdown={false}
                         />
                         <div>
-                            <div className="social-buttons">
+                            <div className="social-buttons-mobile">
                                 <IconButton aria-label="Telegram" href="https://telegram.org" target="_blank">
                                     <img src={TelegramIcon} alt="Telegram" style={{ width: '41px', height: '41px' }} />
                                 </IconButton>
@@ -146,7 +146,7 @@ function Header() {
                     </a>
                 </div>
                 <div className={`header-buttons ${menuOpen ? 'hidden' : ''}`}>
-                    <Box className="button-container">
+                    <Box className="button-container-header">
                         <FancyButton label="ЗАПИСАТЬСЯ" onClick={toggleModal} />
                         <BlurModal isOpen={isModalOpen} close={() => setIsModalOpen(false)} />
                     </Box>
