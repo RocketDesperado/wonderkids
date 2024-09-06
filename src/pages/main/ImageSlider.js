@@ -98,7 +98,7 @@ function ImageSlider() {
                         <Typography variant="h5" component="span">
                             Команда профессиональных нейротренеров в СНГ.
                         </Typography>
-                    <Typography variant="h5" className="verb" gutterBottom>
+                    <Typography variant="h5" style={{color: "rgb(213,170,60)", fontWeight: 'bold'}}>
                         Диагностика и занятия / Очно и онлайн
                     </Typography>
                     <Typography variant="h5" className="last-text-margin" gutterBottom>
