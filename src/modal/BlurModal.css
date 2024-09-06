@@ -23,7 +23,7 @@
 
 .blur-modal-content {
     padding: 0px;
-    background: transparent; /* Set background to transparent */
+    background: blue; /* Set background to transparent */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Consider if you still want the shadow with a transparent background */
     animation: fadeIn 0.6s ease-in-out;
@@ -40,5 +40,8 @@
     }
 
     .blur-modal-content {
+        transform: scale(0.65);
+        border-radius: 80px;
+        margin-bottom: 40px;
     }
 }

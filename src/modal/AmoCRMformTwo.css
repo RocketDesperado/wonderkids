@@ -68,10 +68,15 @@
     #amocrm-form-container-two {
         width: 500px; /* Auto width based on content within */
 
-        padding-top: 450px;
-        transform: scale(0.7); /* Scale down the content */
+        padding-top: 0px;
+         /* Scale down the content */
         transform-origin: top center; /* Ensure it scales down around the top center */
         /*overflow: auto; !* Still allow scrolling if needed *!*/
         display: flex;
+
+        max-width: 100%; /* Ensure it doesn't overflow the modal */
+        overflow-y: auto;
+
+
     }
 }
