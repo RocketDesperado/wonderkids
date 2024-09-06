@@ -16,21 +16,18 @@
 .review-box {
     padding: 40px;
     width: 40%;
-    max-width: 1000px; /* Optional: limit the maximum width */
-    max-height: 400px;
-    box-sizing: border-box;
+    max-width: 1000px;
     background-color: white;
-    height: 440px;
+    height: auto; /* Adjust height dynamically based on content */
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center; /* Center content horizontally */
     border-radius: 20px;
     border: 5px solid #a0d7f9;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    align-self: center; /* Ensure each review-box is centered in the container */
 }
 
 .review-box:hover {
@@ -60,28 +57,20 @@
     color: #333;
 }
 
+.review-image {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure image covers the circle */
+    margin: 10px 0; /* Add some space between the name and image */
+}
+
 @media (max-width: 768px) {
     .review-box {
-        padding: 10px;
-        width: 90%;
-        max-width: 1000px; /* Optional: limit the maximum width */
-        max-height: 400px;
-        box-sizing: border-box;
-        background-color: white;
-        height: 440px;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        border-radius: 20px;
-        border: 5px solid #a0d7f9;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-        align-self: center; /* Ensure each review-box is centered in the container */
+        width: 90%; /* More suitable for mobile */
+        padding: 20px; /* Less padding for smaller screens */
     }
-
     .review-description {
-        font-size: 17px;
+        font-size: 16px; /* Smaller font size for better readability on mobile */
     }
 }

@@ -5,7 +5,7 @@ import Online from './pages/Online';
 import Offline from './pages/Offline';
 import Consultation from './pages/Consultation';
 import About from './pages/about/About';
-import Reviews from './pages/Reviews';
+import Reviews from './pages/reviews/Reviews';
 import FAQ from './pages/FAQ';
 import ImageSlider from './pages/main/ImageSlider';
 import Footer from "./Footer";
