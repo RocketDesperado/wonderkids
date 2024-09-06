@@ -80,3 +80,15 @@
     background: linear-gradient(135deg, #388e3c, #66bb6a);
     box-shadow: 0 0 20px rgba(76, 175, 80, 0.7), 0 0 15px rgba(0, 255, 0, 0.5);
 }
+
+@media (max-width: 768px) {
+    .fancy-button {
+        padding: 15px 8px;
+    }
+
+    .button-label {
+        z-index: 1;
+    }
+}
+
+

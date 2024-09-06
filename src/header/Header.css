@@ -14,6 +14,12 @@
     align-items: center; /* Center items vertically */
 }
 
+.button-container-header {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    gap: 10px;
+}
+
 .header-content {
     display: flex;
     align-items: center;
@@ -68,6 +74,26 @@
 
 .phone-number:hover {
     color: #3EB489;
+}
+
+.social-buttons-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 15px;
+}
+
+.social-buttons-mobile .MuiIconButton-root {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 36px;
+    height: 36px;
+    transition: transform 0.3s ease;
+}
+
+.social-buttons-mobile .MuiIconButton-root:hover {
+    transform: scale(1.1);
 }
 
 .social-buttons {
@@ -159,10 +185,8 @@
         margin-right: 30px;
     }
 
-    .social-buttons {
-        margin-right: 7px; /* Ensure sufficient margin on the right on mobile */
-        margin-left: 7px; /* Remove any unnecessary left margin. */
-        gap: 8px;
+    .social-buttons-mobile {
+        padding-bottom: 10px;
     }
 
     .menu-toggle {
@@ -183,5 +207,15 @@
 
     .header-address {
         display: none; /* Hide desktop menu on mobile */
+    }
+
+    .social-buttons {
+        display: none; /* Hide desktop menu on mobile */
+    }
+
+    .button-container-header {
+        display: flex;
+        justify-content: center; /* Center the button horizontally */
+        gap: 10px;
     }
 }

@@ -59,49 +59,49 @@ function ImageSlider() {
                     </Typography>
                     <TypingAnimation />
                     <div className="text-content-inner">
-                        <Typography variant="h5" component="span" sx={{ display: 'inline' }}>
+                        <Typography variant="h5" component="span">
                             Уникальная методика поможет
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline', fontWeight: 'bold' }} style={{color: "rgb(116,250,192)"}}>
+                        <Typography variant="h5" component="span" className="verb">
                             Запустить
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline'}}>
+                        <Typography variant="h5" component="span">
                             и
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline', fontWeight: 'bold' }} style={{color: "rgb(116,250,192)"}}>
+                        <Typography variant="h5" component="span" className="verb">
                             Развить
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline' }}>
+                        <Typography variant="h5" component="span">
                             речь,
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline', fontWeight: 'bold' }} style={{color: "rgb(116,250,192)"}}>
+                        <Typography variant="h5" component="span" className="verb">
                             Нормализовать
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline' }}>
+                        <Typography variant="h5" component="span">
                             поведение,
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline', fontWeight: 'bold' }} style={{color: "rgb(116,250,192)"}}>
+                        <Typography variant="h5" component="span" className="verb">
                             Избавиться
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline'  }}>
+                        <Typography variant="h5" component="span">
                             от тревожности
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline'  }}>
+                        <Typography variant="h5" component="span">
                             и истерик,
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline', fontWeight: 'bold' }} style={{color: "rgb(116,250,192)"}}>
+                        <Typography variant="h5" component="span" className="verb">
                             Справиться
                         </Typography>
-                        <Typography variant="h5" component="span" sx={{ display: 'inline' }}>
+                        <Typography variant="h5" component="span">
                             с трудностями в учёбе и поведении!
                         </Typography>
                         <Typography variant="h5" component="span">
                             Команда профессиональных нейротренеров в СНГ.
                         </Typography>
-                    <Typography variant="h5" style={{color: "rgb(213,170,60)", fontWeight: 'bold'}} gutterBottom>
+                    <Typography variant="h5" style={{color: "rgb(213,170,60)", fontWeight: 'bold'}}>
                         Диагностика и занятия / Очно и онлайн
                     </Typography>
-                    <Typography variant="h5" gutterBottom style={{marginBottom: "20px"}}>
+                    <Typography variant="h5" className="last-text-margin" gutterBottom>
                         Оставьте заявку на консультацию или напишите нам.
                     </Typography>
                     </div>

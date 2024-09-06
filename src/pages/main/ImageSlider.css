@@ -1,8 +1,16 @@
 /* src/ImageSlider.css */
 
+.last-text-margin {
+    margin-bottom: 20px;
+}
+
+.verb {
+    fontWeight: bold;
+    color: rgb(116,250,192);
+}
+
 .image-slider-container {
     position: relative;
-    maxWidth: 100%;
     padding: 0;
     height: 850px;
     marginTop: 80px;
@@ -75,19 +83,56 @@
     display: flex;
     justify-content: center; /* Center the button horizontally */
     gap: 10px;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
+
+    .image-slider-container {
+        position: relative;
+        padding: 0;
+        height: 100%;
+        marginTop: 80px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center; /* Center the button horizontally */
+        gap: 10px;
+        margin-bottom: 15px;
+        margin-top: 0px;
+    }
+
+
     .text-overlay {
         height: auto; /* Let height adjust based on content */
-        max-height: 100%; /* Adjust for smaller screens */
+        max-height: 95%; /* Adjust for smaller screens */
         width: 95%; /* Adjust width for smaller screens */
+        margin-right: 45px;
+        padding: 0;
+        border-radius: 20px;
     }
 
     .text-content {
-        transform: scale(0.85); /* Scale down the content */
+        transform: scale(0.8); /* Scale down the content */
         font-size: 0.85em; /* Further reduce font size on small screens */
         white-space: normal; /* Allow wrapping on small screens */
+    }
+
+    .text-content-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: left;
+        white-space: normal; /* Allow normal text wrapping */
+        overflow: hidden; /* Hide overflow */
+        text-overflow: ellipsis; /* Add ellipsis to overflowing text */
+        gap: 5px; /* Adjust gap between words if necessary */
+        font-size: 0.95em; /* Slightly smaller font size for better fit */
+    }
+
+    .last-text-margin {
+        marginBottom: 1px;
     }
 }
 
