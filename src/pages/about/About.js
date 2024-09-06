@@ -3,7 +3,8 @@
 import React from 'react';
 import './About.css';
 import img1 from '../../assets/aboutussection/img1.png';
-import GallerySection from "./GallerySection"; // Adjust the path as needed
+import GallerySection from "./GallerySection";
+import AddressContact from "./AddressContact"; // Adjust the path as needed
 
 const About = () => {
     return (
@@ -25,6 +26,7 @@ const About = () => {
                 </div>
             </div>
             <GallerySection/>
+            <AddressContact/>
         </div>
     );
 };

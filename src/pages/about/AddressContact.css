@@ -1,0 +1,56 @@
+.address-contact-container {
+    color: white;
+    padding: 0px 0;
+    text-align: center;
+}
+
+.address-contact-header {
+    margin: 0;
+    padding: 15px 0;
+    background-color: #5a9bb4;
+}
+
+.address-contact-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address-contact-map, .address-contact-info {
+    width: 50%;
+    padding: 0px;
+    background-color: white !important;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.address-contact-info {
+    background-color: #6190ba;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-phone {
+    color: #ff7133;
+}
+
+.info-title {
+    color: #6190ba;
+}
+
+/* Responsive styling for screens smaller than 768px */
+@media (max-width: 768px) {
+    .address-contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .address-contact-map, .address-contact-info {
+        width: 100%; /* Each takes full width */
+    }
+
+    .address-contact-map {
+        order: 2; /* Map goes to the bottom */
+    }
+}
