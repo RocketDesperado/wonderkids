@@ -17,6 +17,8 @@ import ScrollToTop from './ScrollToTop';
 import ApplySection from "./pages/main/ApplySection";
 import Trust from "./pages/main/Trust";
 import ModalQuestion from "./modal/ModalQuestion";
+import BlurModalThree from "./modal/BlurModalThree";
+import BlurModal from "./modal/BlurModal";
 
 const MainPage = () => {
     const [showModal, setShowModal] = useState(false);
@@ -71,7 +73,7 @@ const MainPage = () => {
             <FinalRedirectComponent/>
             <Trust/>
             <ApplySection/>
-            {showModal && <ModalQuestion onClose={handleCloseModal} />}
+            {showModal && <BlurModalThree isOpen={showModal} close={handleCloseModal} />}
         </>
     );
 };
