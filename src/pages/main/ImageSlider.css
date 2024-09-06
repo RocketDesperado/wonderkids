@@ -99,7 +99,7 @@
         display: flex;
         justify-content: center; /* Center the button horizontally */
         gap: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
         margin-top: 0px;
     }
 
@@ -132,7 +132,7 @@
     }
 
     .last-text-margin {
-        marginBottom: 1px;
+        marginBottom: 0px;
     }
 }
 

@@ -1,0 +1,24 @@
+/* Styling for the container inside the dialog where the form will be injected */
+#amocrm-form-container-three-two {
+    position: relative; /* Ensure it is positioned correctly */
+    z-index: 999999000; /* Make sure it is above other content */
+    pointer-events: auto; /* Ensure interactions are allowed */
+    display: block; /* Ensure it is displayed when open */
+}
+
+@media (max-width: 768px) {
+    #amocrm-form-container-three {
+        width: 500px; /* Auto width based on content within */
+
+        padding-top: 0px;
+        /* Scale down the content */
+        transform-origin: top center; /* Ensure it scales down around the top center */
+        /*overflow: auto; !* Still allow scrolling if needed *!*/
+        display: flex;
+
+        max-width: 100%; /* Ensure it doesn't overflow the modal */
+        overflow-y: auto;
+
+
+    }
+}
