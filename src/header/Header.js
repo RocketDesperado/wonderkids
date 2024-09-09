@@ -151,13 +151,13 @@ function Header() {
                         <BlurModal isOpen={isModalOpen} close={() => setIsModalOpen(false)} />
                     </Box>
                     <div className="social-buttons">
-                        <IconButton aria-label="Telegram" href="https://telegram.org" target="_blank">
+                        <IconButton aria-label="Telegram" href="tg://resolve?domain=wonderkids_by" target="_blank">
                             <img src={TelegramIcon} alt="Telegram" style={{ width: '41px', height: '41px' }} />
                         </IconButton>
-                        <IconButton aria-label="Viber" href="https://viber.com" target="_blank">
+                        <IconButton aria-label="Viber" href="viber://add?number=375291242517" target="_blank">
                             <img src={ViberIcon} alt="Viber" style={{ width: '40px', height: '40px' }} />
                         </IconButton>
-                        <IconButton aria-label="WhatsApp" href="https://whatsapp.com" target="_blank">
+                        <IconButton aria-label="WhatsApp" href="https://wa.me/375291242517" target="_blank">
                             <img src={WhatsAppIcon} alt="WhatsApp" style={{ width: '58px', height: '58px' }} />
                         </IconButton>
                     </div>
